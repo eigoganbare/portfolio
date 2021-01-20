@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<!-- saved from url=(0055)https://www.w3schools.com/howto/tryhow_website_band.htm -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="./tryhow_website_band_files/w3.css">
+<link rel="stylesheet" href="./tryhow_website_band_files/font-awesome.min.css">
+<script data-dapp-detection="">
+(function() {
+  let alreadyInsertedMetaTag = false
+
+  function __insertDappDetected() {
+    if (!alreadyInsertedMetaTag) {
+      const meta = document.createElement('meta')
+      meta.name = 'dapp-detected'
+      document.head.appendChild(meta)
+      alreadyInsertedMetaTag = true
+    }
+  }
+
+  if (window.hasOwnProperty('web3')) {
+    // Note a closure can't be used for this var because some sites like
+    // www.wnyc.org do a second script execution via eval for some reason.
+    window.__disableDappDetectionInsertion = true
+    // Likely oldWeb3 is undefined and it has a property only because
+    // we defined it. Some sites like wnyc.org are evaling all scripts
+    // that exist again, so this is protection against multiple calls.
+    if (window.web3 === undefined) {
+      return
+    }
+    __insertDappDetected()
+  } else {
+    var oldWeb3 = window.web3
+    Object.defineProperty(window, 'web3', {
+      configurable: true,
+      set: function (val) {
+        if (!window.__disableDappDetectionInsertion)
+          __insertDappDetected()
+        oldWeb3 = val
+      },
+      get: function () {
+        if (!window.__disableDappDetectionInsertion)
+          __insertDappDetected()
+        return oldWeb3
+      }
+    })
+  }
+})()</script></head><body data-new-gr-c-s-check-loaded="14.991.0" data-gr-ext-installed="">
+
+<!-- Navigation -->
+<nav class="w3-bar w3-black">
+  <a href="./wantToBeUXDesigner/index.htm" class="w3-button w3-bar-item">Home</a>
+  <a href="mailto:AnnetteLee.2018@gmail.com" class="w3-button w3-bar-item">Contact</a>
+</nav>
+
+<!-- Slide Show -->
+<section>
+  <img class="mySlides" src="./wantToBeUXDesigner/eigoganbare-1.jpg" style="width: 100%; display: none;">
+  <img class="mySlides" src="./wantToBeUXDesigner/eigoganbare-2.jpg" style="width: 100%; display: block;">
+  <img class="mySlides" src="./wantToBeUXDesigner/eigoganbare-3.jpg" style="width: 100%; display: none;">
+</section>
+
+<!-- Band Description -->
+<section class="w3-container w3-center w3-content" style="max-width:600px">
+  <p></p>
+  <h2 class="w3-wide">Annette's Portfolio</h2>
+  <p class="w3-opacity"><i>Seeking a career to be a UX Designer</i></p>
+  <p class="w3-justify">I have a passion for technology, especially if it's being used as a tool to help people. 
+    My creativity and empathy involves innovating solutions with visual designs. As a native English Teacher in Japan, I was faced with students' attitude 
+    - in that they think English is too difficult. I worked with Japanese Teachers of English who must follow a rigid curriculm with little flexibility 
+    in how it is taught effectively. There is little emphasis on English communication. A foreign English teacher fills in this gap, but lack the teaching skills 
+    and ways to successfully introduce Japanese to cultural diversity. Because of those, I wanted to create solutions. 
+    So, I developed a website called "Eigo Ganbare" to make learning English easier, practical, and engaging! Now that I'm in the States, 
+    my goal is to be a UX Designer with an interest to design educational learning apps and/or be part of the  
+    accessibile design team to help people cope with learning difficulties. I'm also open to other opportunities, like the design proccess of AR/VR or web-based game development 
+    and making a website more accessible.</p>
+</section>
+<p></p>
+<!-- Band Members -->
+<section class="w3-row-padding w3-center w3-light-grey">
+  <article class="w3-third">
+    <p>Prototype Design</p>
+    <a href ="./wantToBeUXDesigner/Eigo-Ganbare-Mockups.pdf"><img src="./wantToBeUXDesigner/EG-1.jpg" alt="Random Name" style="width:100%"></a>
+    <p>The Beginning of Eigo Ganbare</p>
+  </article>
+  <article class="w3-third">
+    <p>freeCodeCamp - Projects</p>
+    <a href ="https://eigoganbare.github.io/freecodecamp-personalportfoliowebpage/"><img src="./wantToBeUXDesigner/EG-2.jpg" alt="Random Name" style="width:100%"></a>
+    <p>Providing educational resources</p>
+  </article>
+  <article class="w3-third">
+    <p>Eigo Ganbare</p>
+    <a href ="https://eigoganbare.com"><img src="./wantToBeUXDesigner/EG-3.jpg" alt="Random Name" style="width:100%"></a>
+    <p>My website in Action</p>
+  </article>
+</section>
+
+<!-- Footer -->
+<footer class="w3-container w3-padding-64 w3-center w3-black w3-xlarge">
+  <p class="w3-medium">
+  Created by <a href="https://www.linkedin.com/in/annettelee2020/" target="_blank">Annette Lee</a>
+  </p>
+</footer>
+
+<script>
+// Automatic Slideshow - change image every 3 seconds
+var myIndex = 0;
+carousel();
+
+function carousel() {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  for (i = 0; i < x.length; i++) {
+     x[i].style.display = "none";
+  }
+  myIndex++;
+  if (myIndex > x.length) {myIndex = 1}
+  x[myIndex-1].style.display = "block";
+  setTimeout(carousel, 3000);
+}
+</script>
+
+
+
+
+</body></html>
